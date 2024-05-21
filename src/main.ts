@@ -15,6 +15,8 @@ export function styleInlineCsp(): void {
     const setAttributeBind = setAttribute.bind(this);
 
     if (qualifiedName === 'style') {
+      console.log(qualifiedName, value);
+      setAttributeBind('nonce', 'a');
       (this as HTMLElement).style.cssText = value;
     } else {
       setAttributeBind(qualifiedName, value);
@@ -22,7 +24,7 @@ export function styleInlineCsp(): void {
   };
 }
 
-styleInlineCsp();
+// styleInlineCsp();
 
 bootstrapApplication(AppComponent, appConfig).catch((err) =>
   console.error(err)

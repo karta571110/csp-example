@@ -1,4 +1,4 @@
-import { Component, TemplateRef } from '@angular/core';
+import { CSP_NONCE, Component, TemplateRef } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {
   NgbDropdownModule,

@@ -4,11 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --configuration development",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "docker:build": "docker build -t csp-example/angular-app .",
-    "docker:run": "docker run -d -it -p 4200:80/tcp --name angular-app csp-example/angular-app"
+    "docker:build": "docker rm angular-app-csp-17 -f && docker build -t csp-example/angular-app . && npm run docker:run",
+    "docker:run": "docker run -d -it -p 4200:80/tcp --name angular-app-csp-17 csp-example/angular-app"
   },
   "private": true,
   "dependencies": {
